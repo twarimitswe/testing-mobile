@@ -1,0 +1,25 @@
+Using src/app as the root directory for Expo Router.
+React Compiler enabled
+Starting Metro Bundler
+
+Static rendering is enabled. Learn more: https://docs.expo.dev/router/web/static-rendering/
+λ Bundling failed 17514ms node_modules/.pnpm/@expo+router-server@57.0.10_@expo+metro-runtime@57.0.16_expo-constants@57.0.19_expo-fon_513d319fafba25b67d638060e614d7c2/node_modules/@expo/router-server/node/render.js (828 modules)
+Error: Unable to resolve module @react-native-async-storage/async-storage from /media/wisdom/Documents/Notes/Mobile Development/Projects/testing-research/src/hooks/useTodos.ts: @react-native-async-storage/async-storage could not be found within the project or in these directories:
+  node_modules
+[0m [90m 1 |[39m [36mimport[39m { useState[33m,[39m useEffect[33m,[39m useCallback } [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mAsyncStorage[39m [36mfrom[39m [32m'@react-native-async-storage/async-storage'[39m[33m;[39m
+ [90m   |[39m                           [31m[1m^[22m[39m
+ [90m 3 |[39m
+ [90m 4 |[39m [90m// Define the shape of a single Todo item to maintain type safety across the app[39m
+ [90m 5 |[39m [36mexport[39m [36minterface[39m [33mTodo[39m {[0m
+
+Import stack:
+
+ src/hooks/useTodos.ts
+ | import "@react-native-async-storage/async-storage"
+
+ src/app/index.tsx
+ | import "../hooks/useTodos"
+
+ src/app (require.context)
+
